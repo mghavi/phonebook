@@ -39,9 +39,12 @@ class MyTwigExt extends Twig_Extension implements Twig_Extension_GlobalsInterfac
     }
 
 }
-
 $twig->addExtension(new Twig_Extension_Debug);
 $twig->addExtension(new MyTwigExt());
+function redirect($url){
+    header("Location: $url");
+    exit();
+}
 
 function isPost() {
     return ((filter_input(INPUT_SERVER, "REQUEST_METHOD")) == "POST");
