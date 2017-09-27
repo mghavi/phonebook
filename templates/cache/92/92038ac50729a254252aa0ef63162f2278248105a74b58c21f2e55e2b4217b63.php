@@ -104,54 +104,46 @@ class __TwigTemplate_3eb51d3b85652bef981bd936033b926ddc9f1ab95f667bdd246771bb14c
                     </tr>
                     <tr>
                         ";
-        // line 77
+        // line 78
+        echo "                        ";
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["result"] ?? null));
-        foreach ($context['_seq'] as $context["_key"] => $context["results"]) {
-            // line 78
-            echo "                            ";
-            $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable($context["results"]);
-            foreach ($context['_seq'] as $context["_key"] => $context["user"]) {
-                // line 79
-                echo "                                <td>";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["user"], "firstname", array()), "html", null, true);
-                echo "</td>
-                                <td>";
-                // line 80
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["user"], "lastname", array()), "html", null, true);
-                echo "</td>
-                                <td>";
-                // line 81
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["user"], "email", array()), "html", null, true);
-                echo "</td>
-                                <td>";
-                // line 82
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["user"], "cell_phone", array()), "html", null, true);
-                echo "</td>
-                                <td>";
-                // line 83
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["user"], "work_phone", array()), "html", null, true);
-                echo "</td>
-                                <td>";
-                // line 84
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["user"], "home_phone", array()), "html", null, true);
-                echo "</td>
-                                <td>";
-                // line 85
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["user"], "comment", array()), "html", null, true);
-                echo "</td>
-                            ";
-            }
-            $_parent = $context['_parent'];
-            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['user'], $context['_parent'], $context['loop']);
-            $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 87
-            echo "                        ";
+        foreach ($context['_seq'] as $context["_key"] => $context["user"]) {
+            // line 79
+            echo "                            <td>";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["user"], "firstname", array()), "html", null, true);
+            echo "</td>
+                            <td>";
+            // line 80
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["user"], "lastname", array()), "html", null, true);
+            echo "</td>
+                            <td>";
+            // line 81
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["user"], "email", array()), "html", null, true);
+            echo "</td>
+                            <td>";
+            // line 82
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["user"], "cell_phone", array()), "html", null, true);
+            echo "</td>
+                            <td>";
+            // line 83
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["user"], "work_phone", array()), "html", null, true);
+            echo "</td>
+                            <td>";
+            // line 84
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["user"], "home_phone", array()), "html", null, true);
+            echo "</td>
+                            <td>";
+            // line 85
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["user"], "comment", array()), "html", null, true);
+            echo "</td>
+                        ";
         }
         $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['results'], $context['_parent'], $context['loop']);
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['user'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 87
+        echo "                        ";
         // line 88
         echo "                    </tr>
                 </tbody>
@@ -159,6 +151,7 @@ class __TwigTemplate_3eb51d3b85652bef981bd936033b926ddc9f1ab95f667bdd246771bb14c
         </div>
         <!-- /.box-body -->
     </div>
+
 ";
     }
 
@@ -174,7 +167,7 @@ class __TwigTemplate_3eb51d3b85652bef981bd936033b926ddc9f1ab95f667bdd246771bb14c
 
     public function getDebugInfo()
     {
-        return array (  156 => 88,  150 => 87,  142 => 85,  138 => 84,  134 => 83,  130 => 82,  126 => 81,  122 => 80,  117 => 79,  112 => 78,  108 => 77,  87 => 58,  43 => 15,  31 => 4,  28 => 3,  11 => 2,);
+        return array (  148 => 88,  146 => 87,  138 => 85,  134 => 84,  130 => 83,  126 => 82,  122 => 81,  118 => 80,  113 => 79,  108 => 78,  87 => 58,  43 => 15,  31 => 4,  28 => 3,  11 => 2,);
     }
 
     public function getSourceContext()
@@ -255,23 +248,24 @@ class __TwigTemplate_3eb51d3b85652bef981bd936033b926ddc9f1ab95f667bdd246771bb14c
                         <td><span class=\"badge bg-red\">55%</span></td>
                     </tr>
                     <tr>
-                        {% for results in result %}
-                            {% for user in results %}
-                                <td>{{ user.firstname }}</td>
-                                <td>{{ user.lastname }}</td>
-                                <td>{{ user.email }}</td>
-                                <td>{{ user.cell_phone }}</td>
-                                <td>{{ user.work_phone }}</td>
-                                <td>{{ user.home_phone }}</td>
-                                <td>{{ user.comment }}</td>
-                            {% endfor %}
+                        {#                        {% for results in result %}#}
+                        {% for user in result %}
+                            <td>{{ user.firstname }}</td>
+                            <td>{{ user.lastname }}</td>
+                            <td>{{ user.email }}</td>
+                            <td>{{ user.cell_phone }}</td>
+                            <td>{{ user.work_phone }}</td>
+                            <td>{{ user.home_phone }}</td>
+                            <td>{{ user.comment }}</td>
                         {% endfor %}
+                        {#                        {% endfor %}#}
                     </tr>
                 </tbody>
             </table>
         </div>
         <!-- /.box-body -->
     </div>
+
 {% endblock content %}", "search.html.twig", "C:\\xampp\\htdocs\\phonebook\\templates\\search.html.twig");
     }
 }

@@ -74,21 +74,22 @@
                         <td><span class="badge bg-red">55%</span></td>
                     </tr>
                     <tr>
-                        {% for results in result %}
-                            {% for user in results %}
-                                <td>{{ user.firstname }}</td>
-                                <td>{{ user.lastname }}</td>
-                                <td>{{ user.email }}</td>
-                                <td>{{ user.cell_phone }}</td>
-                                <td>{{ user.work_phone }}</td>
-                                <td>{{ user.home_phone }}</td>
-                                <td>{{ user.comment }}</td>
-                            {% endfor %}
+                        {#                        {% for results in result %}#}
+                        {% for user in result %}
+                            <td>{{ user.firstname }}</td>
+                            <td>{{ user.lastname }}</td>
+                            <td>{{ user.email }}</td>
+                            <td>{{ user.cell_phone }}</td>
+                            <td>{{ user.work_phone }}</td>
+                            <td>{{ user.home_phone }}</td>
+                            <td>{{ user.comment }}</td>
                         {% endfor %}
+                        {#                        {% endfor %}#}
                     </tr>
                 </tbody>
             </table>
         </div>
         <!-- /.box-body -->
     </div>
+
 {% endblock content %}

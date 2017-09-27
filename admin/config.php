@@ -13,7 +13,7 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $loader = new Twig_Loader_Filesystem(__DIR__ . '/../templates');
 $twig = new Twig_Environment($loader, array(
     'cache' => __DIR__ . '/../templates/cache',
-    'debug'=>true
+    'debug' => true
         ));
 
 class MyTwigExt extends Twig_Extension implements Twig_Extension_GlobalsInterface {
@@ -39,9 +39,11 @@ class MyTwigExt extends Twig_Extension implements Twig_Extension_GlobalsInterfac
     }
 
 }
+
 $twig->addExtension(new Twig_Extension_Debug);
 $twig->addExtension(new MyTwigExt());
-function redirect($url){
+
+function redirect($url) {
     header("Location: $url");
     exit();
 }

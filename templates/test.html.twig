@@ -1,0 +1,26 @@
+{# empty Twig template #}
+<html>
+    <body>
+        <h1>hu</h1>
+        {#                {{ dump() }}#}
+        {% for results in result %}
+            {{results.firstname}}
+            {{results.lastname}}<br>
+
+        {% endfor %}
+        {#<ul>
+            {% for user in users %}
+                <li>{{ user.username|e }}</li>
+                {% endfor %}
+        </ul>
+        {% for letter in 'a'..'z' %}
+            {{loop.index}}  * {{ letter }}
+        {% else %}
+            <h1>no user found</h1>
+        {% endfor %}
+        {% for i in 0..10 %}
+            * {{ i }}
+        {% endfor %}#}
+
+    </body>
+</html>
