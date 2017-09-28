@@ -1,5 +1,4 @@
 <?php
 
-require __DIR__.'/admin/config.php';
-$clinet = new Client();
-echo $twig->render("search.html.twig");
+require __DIR__ . '/admin/config.php';
+echo $twig->render("base.html.twig");

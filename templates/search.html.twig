@@ -11,7 +11,6 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label>جستجو بر اساس :</label>
-                            {#                            <input type="search" name ="firstname" class="form-control">#}
                             <select name="search" class="form-control">
                                 <option></option>
                                 <option value="firstname">نام</option>
@@ -35,61 +34,50 @@
             </form>
         </div>
     </div>
-    <div class="box">
-        <div class="box-header">
-            <h3 class="box-title">مشخصات مشتری</h3>
+    {% if result is not empty %}
+        <div class="box">
+            <div class="box-header">
+                <h3 class="box-title">مشخصات مشتری</h3>
 
-            <div class="box-tools">
-                <ul class="pagination pagination-sm no-margin pull-right">
-                    <li><a href="#">«</a></li>
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">»</a></li>
-                </ul>
+                <div class="box-tools">
+                    <ul class="pagination pagination-sm no-margin pull-right">
+                        <li><a href="#">«</a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">»</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-        <!-- /.box-header -->
-        <div class="box-body no-padding">
-            <table class="table">
-                <tbody>
-                    <tr>
-                        {#                        <th style="width: 10px">#</th>#}
-                        <th>نام</th>
-                        <th>نام خانوادگی</th>
-                        <th>ایمیل</th>
-                        <th>تلفن همراه</th>
-                        <th>تلفن محل کار</th>
-                        <th>تلفن منزل</th>
-                        <th>توضیحات</th>
-                    </tr>
-                    <tr>
-                        <td>1.</td>
-                        <td>Update software</td>
-                        <td>
-                            <div class="progress progress-xs">
-                                <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
-                            </div>
-                        </td>
-                        <td><span class="badge bg-red">55%</span></td>
-                    </tr>
-                    <tr>
-                        {#                        {% for results in result %}#}
+            <!-- /.box-header -->
+            <div class="box-body no-padding">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th>نام</th>
+                            <th>نام خانوادگی</th>
+                            <th>ایمیل</th>
+                            <th>تلفن همراه</th>
+                            <th>تلفن محل کار</th>
+                            <th>تلفن منزل</th>
+                            <th>توضیحات</th>
+                        </tr>
                         {% for user in result %}
-                            <td>{{ user.firstname }}</td>
-                            <td>{{ user.lastname }}</td>
-                            <td>{{ user.email }}</td>
-                            <td>{{ user.cell_phone }}</td>
-                            <td>{{ user.work_phone }}</td>
-                            <td>{{ user.home_phone }}</td>
-                            <td>{{ user.comment }}</td>
+                            <tr>
+                                <td>{{ user.firstname }}</td>
+                                <td>{{ user.lastname }}</td>
+                                <td>{{ user.email }}</td>
+                                <td>{{ user.cell_phone }}</td>
+                                <td>{{ user.work_phone }}</td>
+                                <td>{{ user.home_phone }}</td>
+                                <td>{{ user.comment }}</td>
+                            </tr>
                         {% endfor %}
-                        {#                        {% endfor %}#}
-                    </tr>
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
+            </div>
+            <!-- /.box-body -->
         </div>
-        <!-- /.box-body -->
-    </div>
+    {% endif %}
 
 {% endblock content %}

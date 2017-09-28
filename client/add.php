@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . '/admin/config.php';
+require __DIR__ . '/../admin/config.php';
 
 if (isPost()) {
     $firstname = filter_input(INPUT_POST, 'firstname', FILTER_SANITIZE_STRING);
@@ -14,7 +14,7 @@ if (isPost()) {
     $client->setClient($firstname, $lastname, $email, $cell_phone, $work_phone, $home_phone, $comment);
     try {
         $client->addClient();
-        redirect("index.php");
+        redirect(PATH . "/index.php");
     } catch (Exception $e) {
         echo $e->getMessage();
     }

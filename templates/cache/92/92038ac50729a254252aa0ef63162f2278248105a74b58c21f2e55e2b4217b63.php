@@ -82,9 +82,7 @@ class __TwigTemplate_3eb51d3b85652bef981bd936033b926ddc9f1ab95f667bdd246771bb14c
             <table class=\"table\">
                 <tbody>
                     <tr>
-                        ";
-        // line 58
-        echo "                        <th>نام</th>
+                        <th>نام</th>
                         <th>نام خانوادگی</th>
                         <th>ایمیل</th>
                         <th>تلفن همراه</th>
@@ -92,61 +90,49 @@ class __TwigTemplate_3eb51d3b85652bef981bd936033b926ddc9f1ab95f667bdd246771bb14c
                         <th>تلفن منزل</th>
                         <th>توضیحات</th>
                     </tr>
-                    <tr>
-                        <td>1.</td>
-                        <td>Update software</td>
-                        <td>
-                            <div class=\"progress progress-xs\">
-                                <div class=\"progress-bar progress-bar-danger\" style=\"width: 55%\"></div>
-                            </div>
-                        </td>
-                        <td><span class=\"badge bg-red\">55%</span></td>
-                    </tr>
-                    <tr>
-                        ";
-        // line 78
-        echo "                        ";
+                    ";
+        // line 65
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["result"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["user"]) {
-            // line 79
-            echo "                            <td>";
+            // line 66
+            echo "                        <tr>
+                            <td>";
+            // line 67
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["user"], "firstname", array()), "html", null, true);
             echo "</td>
                             <td>";
-            // line 80
+            // line 68
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["user"], "lastname", array()), "html", null, true);
             echo "</td>
                             <td>";
-            // line 81
+            // line 69
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["user"], "email", array()), "html", null, true);
             echo "</td>
                             <td>";
-            // line 82
+            // line 70
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["user"], "cell_phone", array()), "html", null, true);
             echo "</td>
                             <td>";
-            // line 83
+            // line 71
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["user"], "work_phone", array()), "html", null, true);
             echo "</td>
                             <td>";
-            // line 84
+            // line 72
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["user"], "home_phone", array()), "html", null, true);
             echo "</td>
                             <td>";
-            // line 85
+            // line 73
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["user"], "comment", array()), "html", null, true);
             echo "</td>
-                        ";
+                        </tr>
+                    ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['user'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 87
-        echo "                        ";
-        // line 88
-        echo "                    </tr>
-                </tbody>
+        // line 76
+        echo "                </tbody>
             </table>
         </div>
         <!-- /.box-body -->
@@ -167,7 +153,7 @@ class __TwigTemplate_3eb51d3b85652bef981bd936033b926ddc9f1ab95f667bdd246771bb14c
 
     public function getDebugInfo()
     {
-        return array (  148 => 88,  146 => 87,  138 => 85,  134 => 84,  130 => 83,  126 => 82,  122 => 81,  118 => 80,  113 => 79,  108 => 78,  87 => 58,  43 => 15,  31 => 4,  28 => 3,  11 => 2,);
+        return array (  135 => 76,  126 => 73,  122 => 72,  118 => 71,  114 => 70,  110 => 69,  106 => 68,  102 => 67,  99 => 66,  95 => 65,  43 => 15,  31 => 4,  28 => 3,  11 => 2,);
     }
 
     public function getSourceContext()
@@ -228,7 +214,6 @@ class __TwigTemplate_3eb51d3b85652bef981bd936033b926ddc9f1ab95f667bdd246771bb14c
             <table class=\"table\">
                 <tbody>
                     <tr>
-                        {#                        <th style=\"width: 10px\">#</th>#}
                         <th>نام</th>
                         <th>نام خانوادگی</th>
                         <th>ایمیل</th>
@@ -237,19 +222,8 @@ class __TwigTemplate_3eb51d3b85652bef981bd936033b926ddc9f1ab95f667bdd246771bb14c
                         <th>تلفن منزل</th>
                         <th>توضیحات</th>
                     </tr>
-                    <tr>
-                        <td>1.</td>
-                        <td>Update software</td>
-                        <td>
-                            <div class=\"progress progress-xs\">
-                                <div class=\"progress-bar progress-bar-danger\" style=\"width: 55%\"></div>
-                            </div>
-                        </td>
-                        <td><span class=\"badge bg-red\">55%</span></td>
-                    </tr>
-                    <tr>
-                        {#                        {% for results in result %}#}
-                        {% for user in result %}
+                    {% for user in result %}
+                        <tr>
                             <td>{{ user.firstname }}</td>
                             <td>{{ user.lastname }}</td>
                             <td>{{ user.email }}</td>
@@ -257,9 +231,8 @@ class __TwigTemplate_3eb51d3b85652bef981bd936033b926ddc9f1ab95f667bdd246771bb14c
                             <td>{{ user.work_phone }}</td>
                             <td>{{ user.home_phone }}</td>
                             <td>{{ user.comment }}</td>
-                        {% endfor %}
-                        {#                        {% endfor %}#}
-                    </tr>
+                        </tr>
+                    {% endfor %}
                 </tbody>
             </table>
         </div>
